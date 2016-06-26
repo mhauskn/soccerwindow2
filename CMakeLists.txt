@@ -1,6 +1,9 @@
 cmake_minimum_required (VERSION 2.6)
 project(soccerwindow2)
 
+find_package(BOOST 1.45.0 COMPONENTS cstdint)
+include_directories(${Boost_INCLUDE_DIRS})
+
 set(LIBRCSC_INCLUDE_DIR CACHE FILEPATH "librcsc include directory")
 set(LIBRCSC_LINK_DIR CACHE FILEPATH "librcsc link directory")
 if(NOT LIBRCSC_INCLUDE_DIR)
