@@ -7,6 +7,11 @@ addons:
       - boost-latest
     packages:
       - libboost-dev
+install:
+  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
+       brew install qt
+       ;
+    fi
 os:
   - linux
   - osx
